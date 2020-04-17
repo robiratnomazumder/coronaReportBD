@@ -37,19 +37,19 @@
           <!--</div>-->
           <div class="col-lg-4 col-md-6">
             <div class="info-box mb-4 bg-primary">
-              <h3>{{confirmedToday}}</h3>
+              <h3>{{confirmedToday | number:0}}</h3>
               <p>Today Confirmed</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="info-box mb-4 bg-success">
-              <h3>{{recoveredToday}}</h3>
+              <h3>{{recoveredToday | number:0}}</h3>
               <p>Today Recovered</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="info-box mb-4 bg-danger">
-              <h3>{{deathsToday}}</h3>
+              <h3>{{deathsToday | number:0}}</h3>
               <p>Today Deaths</p>
             </div>
           </div>
@@ -59,21 +59,21 @@
           <div class="col-lg-4 col-md-6">
             <div class="info-box mb-4 bg-primary">
               <i class="icofont-user-alt-4"></i>
-              <h3>{{confirmedTotal}}</h3>
+              <h3>{{confirmedTotal | number:0}}</h3>
               <p>Total Confirmed</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="info-box mb-4 bg-success">
               <i class="icofont-user-alt-4"></i>
-              <h3>{{recoveredTotal}}</h3>
+              <h3>{{recoveredTotal | number:0}}</h3>
               <p>Total Recovered</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="info-box mb-4 bg-danger">
               <i class="icofont-user-alt-4"></i>
-              <h3>{{deathsTotal}}</h3>
+              <h3>{{deathsTotal | number:0}}</h3>
               <p>Total Deaths</p>
             </div>
           </div>
@@ -110,8 +110,7 @@
   </main>
   <footer id="footer">
     <div class="container">
-      <div class="copyright"> &copy; Copyright <strong><span>Eterna</span></strong>. All Rights Reserved</div>
-      <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> ||
+      <div class="credits">
         Developed by Robi Ratno || API developed by Amdadul Haq
       </div>
     </div>
