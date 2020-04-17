@@ -14,6 +14,7 @@ app.controller("appController", function($scope, $http) {
             angular.element(document).ready( function () {
                 dTable = $('#districtData');
                 dTable.DataTable({
+                    responsive: true,
                     "lengthMenu": [[15, 30, -1], [15, 30, "All"]]
                 });
             });
