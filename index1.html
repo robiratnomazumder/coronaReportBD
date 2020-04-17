@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Covid 19 Report Bangladesh</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="appController" ng-cloak>
+  <header id="header">
+    <div class="container d-flex">
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html"><span>covid 19 reports of bangladesh</span></a></h1>
+      </div>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <!--<div class="col-lg-12 col-md-12 text-center alert alert-primary" role="alert">-->
+            <!--Today's Report-->
+          <!--</div>-->
+          <div class="col-lg-4 col-md-6">
+            <div class="info-box mb-4 bg-primary">
+              <h3>{{confirmedToday}}</h3>
+              <p>Today Confirmed</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="info-box mb-4 bg-success">
+              <h3>{{recoveredToday}}</h3>
+              <p>Today Recovered</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="info-box mb-4 bg-danger">
+              <h3>{{deathsToday}}</h3>
+              <p>Today Deaths</p>
+            </div>
+          </div>
+          <!--<div class="col-lg-12 col-md-12 text-center alert alert-primary" role="alert">-->
+            <!--Total's Report-->
+          <!--</div>-->
+          <div class="col-lg-4 col-md-6">
+            <div class="info-box mb-4 bg-primary">
+              <i class="icofont-user-alt-4"></i>
+              <h3>{{confirmedTotal}}</h3>
+              <p>Total Confirmed</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="info-box mb-4 bg-success">
+              <i class="icofont-user-alt-4"></i>
+              <h3>{{recoveredTotal}}</h3>
+              <p>Total Recovered</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="info-box mb-4 bg-danger">
+              <i class="icofont-user-alt-4"></i>
+              <h3>{{deathsTotal}}</h3>
+              <p>Total Deaths</p>
+            </div>
+          </div>
+        </div>
+        <small><b>Last updated data: &nbsp;{{lastUpdateData  | date:"medium" : 'UTC'}}</b></small>
+      </div>
+    </section>
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>Data according to districts</h2></div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <table id="districtData" class="table list dtable">
+              <thead class="bg-secondary text-white">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">District</th>
+                  <th scope="col">Confirmed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-ng-repeat="(key, value) in getDistrictsData | orderBy:'---confirmed'">
+                  <td>{{key -- 1}}</td>
+                  <td>{{value.name}}</td>
+                  <td>{{value.confirmed}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+  </main>
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright"> &copy; Copyright <strong><span>Eterna</span></strong>. All Rights Reserved</div>
+      <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> ||
+        Design customize & developed by Robi Ratno || API developed by Amdadul Haq
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+  <script src="assets/js/function.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
