@@ -41,51 +41,64 @@
   <section id="contact" class="contact">
     <div class="container">
       <div class="row">
-        <!--<div class="col-lg-12 col-md-12 text-center alert alert-primary" role="alert">-->
-        <!--Today's Report-->
-        <!--</div>-->
-        <div class="col-lg-4 col-md-6">
-          <div class="info-box mb-4 bg-primary">
-            <h3>{{confirmedToday | number:0}}</h3>
-            <p>Today Confirmed</p>
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box mb-4 bgc-skyblue customm">
+            <h3>{{testedToday | number:0}}</h3>
+            <p>Sample test in lab today</p>
+            <label class="date_position">{{lastUpdateData  | date:'dd MMMM, yyyy'}}</label>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="info-box mb-4 bg-success">
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box mb-4 bg-primary customm">
+            <h3>{{confirmedToday | number:0}}</h3>
+            <p>New Confirmed</p>
+            <label class="date_position">{{lastUpdateData  | date:'dd MMMM, yyyy'}}</label>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box mb-4 bg-success customm">
             <h3>{{recoveredToday | number:0}}</h3>
             <p>Today Recovered</p>
+            <label class="date_position">{{lastUpdateData  | date:'dd MMMM, yyyy'}}</label>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="info-box mb-4 bg-danger">
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box mb-4 bg-danger customm">
             <h3>{{deathsToday | number:0}}</h3>
             <p>Today Deaths</p>
+            <label class="date_position">{{lastUpdateData  | date:'dd MMMM, yyyy'}}</label>
           </div>
         </div>
-        <!--<div class="col-lg-12 col-md-12 text-center alert alert-primary" role="alert">-->
-        <!--Total's Report-->
-        <!--</div>-->
-        <div class="col-lg-4 col-md-6">
-          <div class="info-box mb-4 bg-primary">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box mb-4 bgc-skyblue oct">
+            <i class="icofont-user-alt-4"></i>
+            <h3>{{testedTotal | number:0}}</h3>
+            <p>Total sample test in lab</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box mb-4 bg-primary oct">
             <i class="icofont-user-alt-4"></i>
             <h3>{{confirmedTotal | number:0 }}</h3>
             <p>Total Confirmed</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="info-box mb-4 bg-success">
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box mb-4 bg-success oct">
             <i class="icofont-user-alt-4"></i>
             <h3>{{recoveredTotal | number:0}}</h3>
             <p>Total Recovered</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="info-box mb-4 bg-danger">
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box mb-4 bg-danger oct">
             <i class="icofont-user-alt-4"></i>
             <h3>{{deathsTotal | number:0}}</h3>
             <p>Total Deaths</p>
           </div>
         </div>
+
       </div>
       <small><b>Last updated data: &nbsp;{{lastUpdateData  | date:"medium" : 'UTC'}}</b></small>
     </div>

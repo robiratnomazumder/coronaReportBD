@@ -18,6 +18,21 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+.bgc-skyblue{
+  background-color: slateblue;
+}
+.customm{
+  padding: 18px 0 25px 0 !important;
+}
+.date_position{
+  font-size: 11px;
+  float: right;
+  margin: -3px 7px 0 9px;
+  padding-top: 5px;
+}
+.oct{
+  opacity: 0.8;
+}
 .back-to-top {
   position: fixed;
   display: none;
@@ -517,7 +532,8 @@ section {
   color: white;
   text-align: center;
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-  padding: 18px 0 15px 0;
+  padding: 18px 0 10px 0;
+  border-radius: 5px;
 }
 
 .contact .info-box i {
