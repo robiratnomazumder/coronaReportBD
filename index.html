@@ -42,31 +42,27 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6">
-          <div class="info-box mb-4 bgc-skyblue customm">
+          <div class="info-box mb-4 bgc-skyblue">
             <h3>{{testedToday | number:0}}</h3>
-            <p>Sample test in lab today</p>
-            <label class="date_position">{{lastUpdateData  | date:'dd MMMM, yyyy'}}</label>
+            <p>Sample test in lab {{text}}</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="info-box mb-4 bg-primary customm">
+          <div class="info-box mb-4 bg-primary">
             <h3>{{confirmedToday | number:0}}</h3>
-            <p>New Confirmed</p>
-            <label class="date_position">{{lastUpdateData  | date:'dd MMMM, yyyy'}}</label>
+            <p>{{Text}} Confirmed</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="info-box mb-4 bg-success customm">
+          <div class="info-box mb-4 bg-success">
             <h3>{{recoveredToday | number:0}}</h3>
-            <p>Today Recovered</p>
-            <label class="date_position">{{lastUpdateData  | date:'dd MMMM, yyyy'}}</label>
+            <p>{{Text}} Recovered</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="info-box mb-4 bg-danger customm">
+          <div class="info-box mb-4 bg-danger">
             <h3>{{deathsToday | number:0}}</h3>
-            <p>Today Deaths</p>
-            <label class="date_position">{{lastUpdateData  | date:'dd MMMM, yyyy'}}</label>
+            <p>{{Text}} Deaths</p>
           </div>
         </div>
 

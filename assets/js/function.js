@@ -1,5 +1,5 @@
 var app = angular.module('myApp', []);
-app.controller("appController", function($scope, $http) {
+app.controller("appController", function($scope, $http, $filter) {
     $http.get("https://fastaar.com/api").then(
         function successCallback(response) {
             $scope.confirmedToday = response.data.new.confirmed;
@@ -15,6 +15,16 @@ app.controller("appController", function($scope, $http) {
             //$scope.lastUpdateData = $scope.datetime.replace(" ", 'T') + 'Z';
             $scope.lastUpdateData = $scope.datetime;
 
+            $scope.lastData = parseInt($filter('date')($scope.datetime, 'dd'));
+            $scope.CurrentDateTime = parseInt($filter('date')(new Date(), 'dd'));
+            if($scope.lastData === $scope.CurrentDateTime){
+                $scope.text = 'today';
+                $scope.Text = 'Today';
+            }
+            else{
+                $scope.text = 'yesterday';
+                $scope.Text = 'Yesterday';
+            }
             angular.element(document).ready( function () {
                 dTable = $('#districtData');
                 dTable.DataTable({
